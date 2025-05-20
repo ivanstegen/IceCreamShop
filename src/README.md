@@ -1,68 +1,31 @@
-# Проект "Борба с жегата" - Магазин за сладолед
+# Ice Cream Shop Application
 
-## Описание
-Проектът представя софтуерна реализация на магазин за сладолед, използвайки три основни 
-шаблона за дизайн - Singleton, Factory и Decorator. Включва модерен и удобен конзолен интерфейс, 
-който позволява на потребителите да взаимодействат с магазина интерактивно.
+A simple Java console application for an ice cream shop that demonstrates design patterns including:
 
-## Използвани шаблони
-1. **Singleton (Единак)** - Гарантира, че магазинът за сладолед има само една инстанция.
-   - Имплементиран в класа `IceCreamShop`
+- Singleton Pattern (IceCreamShop class)
+- Factory Pattern (IceCreamFactory class)
+- Decorator Pattern (IceCream decorators)
 
-2. **Factory (Фабрика)** - Използва се за създаване на различни видове сладолед.
-   - Имплементиран в класа `IceCreamFactory`
+## Features
 
-3. **Decorator (Декоратор)** - Използва се за добавяне на добавки към сладоледите.
-   - Основен интерфейс: `IceCream`
-   - Абстрактен декоратор: `IceCreamDecorator`
-   - Конкретни декоратори: `ChocolateGlazeDecorator`, `ChocolateSticksDecorator`
+- Order ice cream with optional toppings
+- View the price list of available ice creams and toppings
+- View sales statistics
 
-## Функционалност
-- Избор между три вида сладолед: ванилов, шоколадов и ягодов
-- Възможност за добавяне на добавки: шоколадова глазура и шоколадови пръчици
-- Регистрация на клиенти и запаметяване на предпочитанията им
-- Преглед на статистика на магазина и продажбите по видове
-- Интерактивен конзолен интерфейс с меню за навигация
-- Преглед на ценоразпис
-- Детайлна статистика за продажбите
+## How to Run
 
-## Интерфейс
-Проектът предлага интуитивен конзолен интерфейс с различни опции:
-1. **Нова поръчка** - Позволява на клиента да поръча сладолед с избрани добавки и се регистрира при желание
-2. **Преглед на клиенти** - Показва всички регистрирани клиенти
-3. **Преглед на ценоразпис** - Показва цените на всички предлагани артикули
-4. **Статистика на магазина** - Извежда подробна информация за продажбите
-5. **За нас** - Информация за магазина
+1. Clone the repository
+2. Compile the Java files
+3. Run the Main class
 
-## Структура на проекта
 ```
-IceCreamShop/
-    src/
-        Main.java                      # Главен клас на приложението с потребителски интерфейс
-        README.md                      # Документация
-        com/
-            icecreamshop/
-                decorator/             # Имплементация на Decorator шаблон
-                    ChocolateGlazeDecorator.java    # Декоратор за шоколадова глазура
-                    ChocolateSticksDecorator.java   # Декоратор за шоколадови пръчици
-                    IceCream.java                   # Основен интерфейс
-                    IceCreamDecorator.java          # Абстрактен декоратор
-                factory/              # Имплементация на Factory шаблон
-                    IceCreamFactory.java           # Фабрика за създаване на сладоледи
-                model/                # Класове на бизнес модела
-                    ChocolateIceCream.java         # Шоколадов сладолед
-                    Customer.java                  # Клиент
-                    IceCream.java                  # Placeholder за интерфейса
-                    StrawberryIceCream.java        # Ягодов сладолед
-                    VanillaIceCream.java           # Ванилов сладолед
-                singleton/            # Имплементация на Singleton шаблон
-                    IceCreamShop.java              # Единствена инстанция на магазина
+javac -d bin src/*.java src/com/icecreamshop/*/*.java
+java -cp bin Main
 ```
 
-## Как да стартирате програмата
-1. Компилирайте всички Java файлове
-2. Стартирайте `Main` класа
-3. Следвайте инструкциите на екрана за навигация в приложението
+## Menu Options
 
-## Заключение
-Този проект демонстрира успешно използването на трите дизайн шаблона Singleton, Factory и Decorator в контекста на магазин за сладолед. Подробната документация и демо режимът позволяват на потребителите да разберат как тези шаблони работят заедно за създаване на гъвкава и разширяема система.
+- Нова поръчка (New Order): Place a new ice cream order
+- Преглед на ценоразпис (Price List): View the price list
+- Статистика на магазина (Shop Statistics): View sales statistics
+- Изход (Exit): Exit the application
